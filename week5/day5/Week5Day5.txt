@@ -1,0 +1,5 @@
+Exercise 1 : Group Elements by Property: Given a list of objects with a specific property, group them into a map where the keys are the property values and the values are lists of objects with that property.
+Let's say you have a class Person with properties name and age. You want to group people by their age.
+
+Exercise 2 : Write a program that takes a list of integers as input and calculates the sum of all even numbers in the list. using normal and 1 program with java 8
+
