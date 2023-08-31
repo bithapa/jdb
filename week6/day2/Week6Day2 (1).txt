@@ -1,0 +1,7 @@
+Exercise 1: Configure hibernate and perform basic insert/fetch operation on data.Create a entity named Person with fields id, name, age, adddress.
+
+Exercise 2: Create a functional interface(Single abstract method interface) and provide a method as : 
+                      int add(int a, int b)
+             Using lambda expression provide implementation for this method in class.
+
+Exercise 3 : In Hiberate , difference between get() and load() method to fetch data with example.

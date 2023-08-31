@@ -1,0 +1,26 @@
+Exercie 1: You are tasked with creating an advanced account management system using Hibernate. In addition to CRUD operations, you will design and implement transactional operations for managing account balances and transactions in a database.
+
+Account Entity:
+
+Design an entity class named Account with the attributes mentioned before: id, accountNumber, accountHolderName, and balance.
+Hibernate Configuration:
+
+Set up the Hibernate configuration (hibernate.cfg.xml) with appropriate database connection details and entity scanning.
+Advanced Operations:
+
+Implement the following operations for the Account entity using Hibernate and transactions:
+Deposit: Increase the balance of an account by a specified amount.
+Withdrawal: Decrease the balance of an account by a specified amount if sufficient funds are available.
+Transfer: Transfer a specified amount from one account to another if sufficient funds are available.
+
+
+
+Exercise 2: 
+
+Create a Java program that performs the following steps:
+
+Given a list of numbers: 5, 12, 7, 3, 8, 10.
+Use Java streams and intermediate operations to accomplish the following:
+Filter the numbers to keep only the even ones.
+Multiply each even number by 2.
+Sort the resulting numbers in ascending order.

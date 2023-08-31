@@ -1,0 +1,21 @@
+Exercise 1 : WAP in Java to create a table in database using jdbc with following specification :
+                table : Company(id,name,code,location)
+            -- write code to insert data in same table.
+            -- write code to retrieve data in same table.
+            -- write code to delete data in same table.
+
+Exercise 2 : Write a program that takes two lists of integers as input and finds the common elements between them.
+Ex: List<Integer> list1 = List.of(1,4,6,3,7,8);
+    List<Integer> list1 = List.of(2,5,8,2,5,6);
+
+output : common elements in two list = 6,8
+
+Exercise 3 : With already created table authors,books,book_loan .write queries to fetch data for given scenario : 
+    
+1) Display authors along with the total number of times their books have been borrowed.
+2) List authors who haven't written any books in the database.
+3) List the books borrowed by a specific student . (any student name here ,that is present in db)
+
+
+
+

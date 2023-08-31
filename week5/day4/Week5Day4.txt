@@ -1,0 +1,5 @@
+Exercise 1: Create a servlet application with context path /first-app  which will display current date on landing page.
+
+Exercise 2: WAP in java to find the element in a list which is repeated max time in list.
+        List<Integer> numbers = Arrays.asList(3, 7, 7, 5, 9, 5, 7);
+        o/p -> 7 will be the answer here ,as 7 is repeated 3 times here ,which is max.

@@ -1,0 +1,8 @@
+Exercie 1: You are tasked with creating a basic Student Management System using Hibernate. The system should allow users to perform CRUD operations (Create, Read, Update, Delete) on student records.
+
+Entity: Student
+
+Attributes: id (auto-generated), firstName, lastName, age, grade
+
+
+Exercise 2: Count the number of odd numbers in list using java 8.hint use stream,filter, lambda expression, count combination.

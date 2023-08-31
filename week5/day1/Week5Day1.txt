@@ -1,0 +1,98 @@
+Assignment : - Below is table structure with records . Please execute it first in postgres/mysql
+               In end there will be statement for which you have to write queries.
+
+1) Author Table : 
+
+CREATE TABLE IF NOT EXISTS public.authors
+(
+    author_id bigint NOT NULL,
+    author_name character varying COLLATE pg_catalog."default",
+    author_code character varying COLLATE pg_catalog."default",
+    CONSTRAINT authors_pkey PRIMARY KEY (author_id)
+)
+
+************************************
+
+INSERT INTO public.authors VALUES (1, 'J.K. Rowling', 'JKR');
+INSERT INTO public.authors VALUES (2, 'George Orwell', 'GOR');
+INSERT INTO public.authors VALUES (3, 'Stephen King', 'STK');
+INSERT INTO public.authors VALUES (4, 'Harper Lee', 'HPL');
+INSERT INTO public.authors VALUES (5, 'Jane Austen', 'JAN');
+INSERT INTO public.authors VALUES (6, 'Agatha Christie', 'AGC');
+
+2) Books Table : 
+
+
+CREATE TABLE IF NOT EXISTS public.books
+(
+    book_id bigint NOT NULL,
+    book_name character varying COLLATE pg_catalog."default",
+    book_title character varying COLLATE pg_catalog."default",
+    publication_year bigint,
+    author_id bigint,
+    CONSTRAINT books_pkey PRIMARY KEY (book_id),
+    CONSTRAINT fk_book_author_id FOREIGN KEY (author_id)
+        REFERENCES public.authors (author_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+)
+
+************************************
+
+INSERT INTO public.books VALUES (1, 'Harry Potter and the Philosophers Stone', 'Fiction', 1997, 1);
+INSERT INTO public.books VALUES (3, 'Pride and Prejudice', 'Social', 1813, 3);
+INSERT INTO public.books VALUES (4, 'To Kill a Mockingbird', 'Suspense', 1934, 4);
+INSERT INTO public.books VALUES (5, 'The Fellowship of the Ring', 'Inspirational', 1999, 5);
+INSERT INTO public.books VALUES (6, 'Java Sql Queries', 'Programming', 2006, 4);
+INSERT INTO public.books VALUES (7, 'Spring Framework', 'Programming', 2003, 3);
+INSERT INTO public.books VALUES (2, 'Nineteen Eighty-Four', 'Historical', 1949, 2);
+INSERT INTO public.books VALUES (8, 'A Passage To India', 'Historical', 1989, 1);
+INSERT INTO public.books VALUES (9, 'The Sound And the Fury', 'Suspense', 2014, 2);
+INSERT INTO public.books VALUES (10, 'The Alchemist', 'Inspirational', 1993, 4);
+
+
+3) Books Loan Table : 
+
+CREATE TABLE IF NOT EXISTS public.books_loan
+(
+    loan_id bigint NOT NULL,
+    student_name character varying COLLATE pg_catalog."default",
+    loan_date character varying COLLATE pg_catalog."default",
+    due_date character varying COLLATE pg_catalog."default",
+    book_id bigint,
+    CONSTRAINT books_loan_pkey PRIMARY KEY (loan_id),
+    CONSTRAINT fk_book_loan_book_id FOREIGN KEY (book_id)
+        REFERENCES public.books (book_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+*************************************
+
+INSERT INTO public.books_loan VALUES (1, 'Prakash', '23-08-2023', '19-09-2023', 1);
+INSERT INTO public.books_loan VALUES (2, 'Aseem', '10-08-2023', '10-09-2023', 2);
+INSERT INTO public.books_loan VALUES (3, 'Paras', '23-08-2023', '19-09-2023', 3);
+INSERT INTO public.books_loan VALUES (4, 'Nabeek', '10-08-2023', '10-09-2023', 4);
+INSERT INTO public.books_loan VALUES (5, 'Sabita', '15-08-2023', '15-08-2023', 5);
+INSERT INTO public.books_loan VALUES (6, 'Nabeek', '23-08-2023', '23-09-2023', 7);
+INSERT INTO public.books_loan VALUES (7, 'Saroj', '15-08-2023', '15-09-2023', 6);
+INSERT INTO public.books_loan VALUES (8, 'Linn', '10-08-2023', '10-09-2023', 8);
+
+
+*******************************************************************************************************
+
+
+Write queries for given : 
+
+
+1) Fetch matching author_name, book_name, book_title, publication_year from tables mentioned (Exact record onlu be there).
+2) Fetch all author_name, book_name, book_title, publication_year from tables mentioned (If if mapping not found , print those records)
+3) Fetch student_name,book_name,author_name if book_loan_id = 4
+4) Fetch student_name,book_name,author_name if book_loan_id = 4
+5) Print student_name who have taken more than 1 book in book_loan
+6) Fecth book_name who are not mapped in book_loan table.
+7) Fecth all records with column book_name,book_title , author_name where book_title='Programming'
+
+
+

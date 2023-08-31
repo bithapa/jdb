@@ -1,0 +1,6 @@
+Exercise 1: Design a servlet based application to perform addition of some users in database.User info will contain id,name,address.All values need to be taken as user input from UI.
+
+Exercise 2:  Given a list of integers and a target sum, find two numbers in the list that add up to the target sum.
+  ex: List of numbers {1,6,3,8,2}
+      given sum = 10;
+      o/p numbers : - 8,2

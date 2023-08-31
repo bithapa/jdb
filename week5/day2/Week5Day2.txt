@@ -1,0 +1,14 @@
+Exercise 1: Create Java Program to connect with your respective database.
+
+Exercise 2: Write a program in java that finds the key with the highest value in a given map.
+           // Map<String,Integer> map ;
+           // map.put("A",10)
+           // map.put("B",20)
+           // output will be B
+
+Exercise 3: From tables in earlier assignment authors,books,book_loan. Write SQL queries for given : 
+
+ 1) Retrieve the names of books and their authors that were published before the year 2000.
+ 2) Count the number of books written by each author.
+ 3) Identify authors who have written more than one book.
+
